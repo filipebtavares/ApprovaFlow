@@ -1,6 +1,11 @@
-﻿namespace ApprovaFlow.API.Controllers
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace ApprovaFlow.API.Controllers
 {
-    public class UserController
+    [Route("api/user")]
+    [ApiController]
+    public class UserController : ControllerBase
+
     {
     }
 }

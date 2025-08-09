@@ -11,6 +11,7 @@ namespace ApprovaFlow.Core.Entity
        
 
         public int Id { get; private set; }
+        public User UserDecision { get; private set; }
         public PurchaseRequest PurchaseRequest { get; private set; }
         public string  RequestDecision { get; private set; }
         public DateTime DecisionDate { get; private set; }
