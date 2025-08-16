@@ -13,6 +13,7 @@ namespace ApprovaFlow.Core.Entity
         public string  RequestTitle { get; private set; }
         public DateTime  DateRequest { get; private set; }
         public StatusRequest Status { get; private set; }
+        public PurchaseDecision PurchaseDecision { get; private set; }
         public User User { get; private set; }
         public bool IsDeleted { get; private set; }
 

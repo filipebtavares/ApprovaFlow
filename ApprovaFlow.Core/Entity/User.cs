@@ -15,6 +15,7 @@ namespace ApprovaFlow.Core.Entity
         public int Cpf { get; private set; }
         public string FullName { get; private set; }
         public string Sector { get; private set; }
+        public List<PurchaseDecision> PurchaseDecisions { get; private set; }
         public List<PurchaseRequest> PurchaseRequests { get; private set; } 
         public bool IsDeleted { get; private set; }
 
@@ -34,6 +35,7 @@ namespace ApprovaFlow.Core.Entity
             Sector = sector;
             IsDeleted = false;
             PurchaseRequests = [];
+            PurchaseDecisions = [];
         }
 
         public void UpdateUser(string fullName, string role, int cpf, string sector, string email)

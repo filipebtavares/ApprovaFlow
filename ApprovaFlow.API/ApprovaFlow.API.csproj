@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -10,5 +10,12 @@
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
+
+
+	<ItemGroup>
+		<ProjectReference Include="..\ApprovaFlow.Application\ApprovaFlow.Application.csproj" />
+		<ProjectReference Include="..\ApprovaFlow.Core\ApprovaFlow.Core.csproj" />
+		<ProjectReference Include="..\ApprovaFlow.Infrastructure\ApprovaFlow.Infrastructure.csproj" />
+	</ItemGroup>
 
 </Project>

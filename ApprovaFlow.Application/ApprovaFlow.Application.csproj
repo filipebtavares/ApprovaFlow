@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ApprovaFlow.Core\ApprovaFlow.Core.csproj" />
+  </ItemGroup>
+
 </Project>
