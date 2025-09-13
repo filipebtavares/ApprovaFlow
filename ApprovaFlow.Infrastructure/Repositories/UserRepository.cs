@@ -46,11 +46,7 @@ namespace ApprovaFlow.Infrastructure.Repositories
         {
             var decisions = await _context.PurchaseDecisions.SingleOrDefaultAsync(j => j.Id == id);
 
-            if (decisions is null)
-            {
-                return ResultViewModel<DecisionItemViewModel>.Error("Essa decisçaõ não pode ser encotrada");
-            }
-
+            return decisions;
 
         }
 
@@ -59,8 +55,14 @@ namespace ApprovaFlow.Infrastructure.Repositories
             return await _context.PurchaseRequests.SingleOrDefaultAsync(m => m.Id == id);
         }
 
-        public async Task UpdateUser( User user)
+        public async Task<User> GetUserById(int id)
         {
+            return await _context.Users.SingleOrDefaultAsync(j => j.Id == id);
+        }
+
+        public async Task UpdateUser(User user)
+        {
+           
             _context.Users.Update(user);
             await _context.SaveChangesAsync();
         }

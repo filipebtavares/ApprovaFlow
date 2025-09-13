@@ -8,8 +8,11 @@ namespace ApprovaFlow.Application.Models
 {
     public  class UpdateUserInputModel
     {
+        public int IdUser { get; set; }
         public string  FullName { get; set; }
         public string  Sector { get; set; }
         public string  Cpf { get; set; }
+        public string  Role { get; set; }
+        public string  Email { get; set; }
     }
 }

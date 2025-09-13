@@ -10,7 +10,8 @@ namespace ApprovaFlow.Core.Repositories
         Task<List<PurchaseDecision>> GetAllDecisions();
         Task<PurchaseDecision> GetDecisionId(int id);
         Task<int> CreateUser(User user);
-        Task UpdateUser(User model);
+        Task UpdateUser( User model);
+        Task<User> GetUserById(int id);
         Task<bool> UserExist(int id);
     }
 }
