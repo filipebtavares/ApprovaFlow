@@ -1,4 +1,5 @@
 ﻿
+using System.Diagnostics;
 using ApprovaFlow.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -22,6 +23,11 @@ namespace ApprovaFlow.Infrastructure
 
             service.AddDbContext<ApprovaFlowDb>(o => o.UseSqlServer(connectString));
             return service;
+        }
+
+        private static IServiceCollection AddRepositories(this IServiceCollection services)
+        {
+            return services;
         }
     }
 }

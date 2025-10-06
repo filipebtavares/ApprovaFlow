@@ -1,12 +1,23 @@
 ﻿using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ApprovaFlow.API.Exception
 {
     public class ApiExceptionHandler : IExceptionHandler
     {
-        public ValueTask<bool> TryHandleAsync(HttpContext httpContext, System.Exception exception, CancellationToken cancellationToken)
+        public async ValueTask<bool> TryHandleAsync(HttpContext httpContext, System.Exception exception, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var details = new ProblemDetails
+            {
+                Status = StatusCodes.Status500InternalServerError,
+                Title = "Server Error"
+            };
+
+            httpContext.Response.StatusCode = StatusCodes.Status500InternalServerError;
+
+            await httpContext.Response.WriteAsJsonAsync(details, cancellationToken);
+
+            return true;
         }
     }
 }

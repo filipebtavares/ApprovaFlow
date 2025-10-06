@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ApprovaFlow.Core.Repositories
 {
-    internal class IPurchaseDecision
+    public interface IPurchaseDecision
     {
     }
 }
