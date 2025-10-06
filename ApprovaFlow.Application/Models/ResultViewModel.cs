@@ -40,7 +40,7 @@ namespace ApprovaFlow.Application.Models
             => new ResultViewModel<T>(data);
 
         public static ResultViewModel<T> Error(string message)
-            => new ResultViewModel<T>(default, true, message);
+            => new ResultViewModel<T>(default, false, message);
     }
 
     public enum StatusViewModel

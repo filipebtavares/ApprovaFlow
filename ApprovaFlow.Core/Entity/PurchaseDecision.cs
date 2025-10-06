@@ -19,10 +19,9 @@ namespace ApprovaFlow.Core.Entity
         public DateTime DecisionDate { get; private set; }
         public  bool IsDeleted { get; private set; }
 
-        public PurchaseDecision(int id, PurchaseRequest purchaseRequest, string requestDecision, DateTime decisionDate)
+        public PurchaseDecision( string requestDecision)
         {
-            Id = id;
-            PurchaseRequest = purchaseRequest;
+       
             RequestDecision = requestDecision;
             DecisionDate = DateTime.Now;
             IsDeleted = false;

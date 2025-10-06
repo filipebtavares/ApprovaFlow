@@ -5,8 +5,6 @@ namespace ApprovaFlow.Core.Entity
 {
     public  class PurchaseRequest
     {
-   
-
         public int Id { get; private set; }
         public int UserId { get; private set; }
         public string  RequestDescription { get; private set; }
@@ -17,12 +15,12 @@ namespace ApprovaFlow.Core.Entity
         public User User { get; private set; }
         public bool IsDeleted { get; private set; }
 
-
-        public PurchaseRequest(int id, int userId, string requestDescription,
-            string requestTitle, DateTime dateRequest, string requestDecision,
-            DateTime decisionDate)
+        public PurchaseRequest()
         {
-            Id = id;
+        }
+
+        public PurchaseRequest(int userId, string requestDescription, string requestTitle)
+        {
             UserId = userId;
             RequestDescription = requestDescription;
             RequestTitle = requestTitle;
@@ -31,6 +29,9 @@ namespace ApprovaFlow.Core.Entity
             IsDeleted = false;
         }
 
-
+        public void SetAsDeleted()
+        {
+            IsDeleted = true;
+        }
     }
 }
