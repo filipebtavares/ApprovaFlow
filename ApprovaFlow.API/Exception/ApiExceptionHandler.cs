@@ -16,7 +16,6 @@ namespace ApprovaFlow.API.Exception
             httpContext.Response.StatusCode = StatusCodes.Status500InternalServerError;
 
             await httpContext.Response.WriteAsJsonAsync(details, cancellationToken);
-
             return true;
         }
     }

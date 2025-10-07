@@ -1,9 +1,6 @@
 ﻿
-<<<<<<< HEAD
-using System.Diagnostics;
-=======
+
 using System.Text;
->>>>>>> dd43734afb5e48e528c852123404df7029e50384
 using ApprovaFlow.Infrastructure.Persistence;
 using ApprovaFlow.Infrastructure.Security;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -33,10 +30,7 @@ namespace ApprovaFlow.Infrastructure
             return service;
         }
 
-<<<<<<< HEAD
-        private static IServiceCollection AddRepositories(this IServiceCollection services)
-        {
-=======
+
         private static IServiceCollection AddSecurity(this IServiceCollection services, IConfiguration config)
         {
             services.AddScoped<IAuthService, AuthService>();
@@ -56,7 +50,6 @@ namespace ApprovaFlow.Infrastructure
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Jwt:Key"]))
                     };
                 });
->>>>>>> dd43734afb5e48e528c852123404df7029e50384
             return services;
         }
     }
